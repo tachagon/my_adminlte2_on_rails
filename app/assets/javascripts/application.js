@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require jquery.slimscroll
 //= require app
+//= require flash
 

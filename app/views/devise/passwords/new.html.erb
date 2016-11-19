@@ -1,0 +1,27 @@
+<div class="login-box">
+
+  <div class="login-logo">
+    <a href="/"><b>Admin</b>LTE</a>
+  </div>
+
+  <div class="login-box-body">
+
+	<h3 class="login-box-msg">Forgot your password?</h3>
+
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+	  <%= devise_error_messages! %>
+
+	  <div class="form-group">
+	    <%= f.label :email %><br />
+	    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+	  </div>
+
+	  <%= f.submit "Send me reset password instructions", class: 'btn btn-primary btn-block btn-flat' %>
+	<% end %>
+
+	<div class="login-box-msg">
+		<%= render "devise/shared/links" %>
+	</div>
+
+	</div>
+</div>
